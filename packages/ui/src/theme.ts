@@ -24,4 +24,4 @@ const theme =
       })
     : PaperDefaultTheme; // Стандартная тема для React Native
 
-export { theme };
+export default theme;
