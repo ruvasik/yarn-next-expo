@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "ui": ["packages/ui/src"]
+      "@yarn-next-expo/ui": ["packages/ui/src/index.ts"]
     },
     "jsx": "react",
     "esModuleInterop": true,

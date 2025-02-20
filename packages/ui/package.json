@@ -1,10 +1,14 @@
 {
-  "name": "ui",
+  "name": "@yarn-next-expo/ui",
   "version": "1.0.0",
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@mui/material": "^6.4.5"
+    "@mui/material": "^6.4.5",
+    "react-native-paper": "^5.13.1"
+  },
+  "exports": {
+    ".": "./src/index.ts"
   }
 }

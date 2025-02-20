@@ -2,17 +2,17 @@
   "name": "yarn-next-expo",
   "private": true,
   "workspaces": [
-    "apps/next",
     "apps/expo",
+    "apps/next",
     "packages/ui"
   ],
   "packageManager": "yarn@4.6.0",
   "scripts": {
-    "start:next": "yarn workspace next dev",
-    "start:expo": "yarn workspace expo start",
+    "start:next": "yarn workspace @yarn-next-expo/next dev",
+    "start:expo": "yarn workspace @yarn-next-expo/expo start",
     "start": "concurrently \"yarn start:next\" \"yarn start:ios\"",
-    "start:ios": "yarn workspace expo start --ios",
-    "start:android": "yarn workspace expo start --android",
+    "start:ios": "yarn workspace @yarn-next-expo/expo start --ios",
+    "start:android": "yarn workspace @yarn-next-expo/expo start --android",
     "lint": "eslint . --ext .ts,.tsx",
     "format": "prettier --write .",
     "prepare": "husky install"

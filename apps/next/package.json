@@ -1,5 +1,5 @@
 {
-  "name": "next",
+  "name": "@yarn-next-expo/next",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/cache": "^11.14.0",
+    "@mui/material-nextjs": "^6.4.3",
+    "@yarn-next-expo/ui": "workspace:*",
     "next": "15.1.7",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "ui": "workspace:*"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

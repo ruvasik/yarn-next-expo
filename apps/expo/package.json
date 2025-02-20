@@ -1,5 +1,5 @@
 {
-  "name": "expo",
+  "name": "@yarn-next-expo/expo",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
@@ -9,15 +9,18 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@yarn-next-expo/ui": "workspace:*",
     "expo": "~52.0.36",
     "expo-status-bar": "~2.0.1",
     "react": "18.3.1",
+    "react-dom": "^19.0.0",
     "react-native": "0.76.7",
-    "ui": "workspace:*"
+    "react-native-safe-area-context": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~18.3.12",
+    "@types/react-dom": "^19",
     "typescript": "^5.3.3"
   },
   "private": true
