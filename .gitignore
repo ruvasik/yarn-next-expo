@@ -11,3 +11,38 @@
 
 #!.yarn/cache
 .pnp.*
+
+# Node modules
+node_modules/
+
+# Yarn
+.yarn/
+.yarnrc.yml
+/.pnp.*
+
+# Next.js build
+.next/
+out/
+
+# Expo build
+.expo/
+.expo-shared/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# MacOS
+.DS_Store
+
+# IDE specific files
+.vscode/
+.idea/
+
+# TypeScript
+*.tsbuildinfo
+
+# Operating system files
+Thumbs.db
+ehthumbs.db
