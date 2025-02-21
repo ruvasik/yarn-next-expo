@@ -1,29 +1,36 @@
-import type { NextConfig } from 'next';
 import * as path from 'node:path';
-import { withExpo } from "@expo/next-adapter";
 
-console.log('STRAT!!!')
+const { withTamagui } = require('@tamagui/next-plugin');
 
-const nextConfig: NextConfig = {
+module.exports = function (name, { defaultConfig }) {
+  let config = {
     reactStrictMode: true,
-    swcMinify: true,
-    transpilePackages: [
-        'react-native',
-        'react-native-web',
-        'expo',
-        // Add more React Native/Expo packages here as needed
-    ],
     experimental: {
-        turbo: {
-            resolveExtensions: ['.web.tsx', '.web.ts', '.js', '.jsx', '.ts', '.tsx'], // Add your custom extensions here
-            rules: {
-                '*.svg': {
-                    loaders: ['@svgr/webpack'], // Example loader configuration for SVGs
-                    as: '*.js',
-                },
-            },
-        },
+      appDir: true,
+      turbo: true,
     },
-};
+    compiler: {
+      styledComponents: true,
+    },
+    webpack(config) {
+      config.resolve.alias['@tamagui/config'] = path.join(
+        __dirname,
+        '../../packages/ui/src/tamagui.config.ts'
+      );
+      config.resolve.modules.push(path.resolve(__dirname, '../../packages'));
+      return config;
+    },
+  };
 
-export default withExpo(nextConfig);
+  const tamaguiPlugin = withTamagui({
+    appDir: true,
+    config: './tamagui.config.ts',
+    components: ['tamagui'],
+    // outputCSS: process.env.NODE_ENV === 'production' ? './public/tamagui.css' : null,
+    // disableExtraction: process.env.NODE_ENV === 'development"
+  });
+  return {
+    ...config,
+    ...tamaguiPlugin(config),
+  };
+};

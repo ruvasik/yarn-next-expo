@@ -32,5 +32,11 @@
     "lint-staged": "^15.4.3",
     "prettier": "^3.5.1"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@tamagui/helpers-tamagui": "^1.125.11",
+    "react-native-gesture-handler": "^2.24.0",
+    "react-native-svg": "^15.11.1",
+    "tamagui": "^1.125.10"
+  }
 }

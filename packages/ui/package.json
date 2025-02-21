@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "src/index.ts",
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mui/material": "^6.4.5",
-    "react-native": "^0.78.0",
-    "react-native-paper": "^5.13.1"
+    "@tamagui/config": "^1.125.12",
+    "@tamagui/core": "^1.125.11",
+    "@tamagui/next-theme": "^1.125.12",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "tamagui": "^1.125.10"
   },
   "exports": {
     ".": "./src/index.ts"

@@ -1,17 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { ThemeProvider } from '@mui/material/styles';
-import { theme, Button } from '@yarn-next-expo/ui';
+import { TamaguiProvider, Theme } from 'tamagui';
+import { Button, config } from '@yarn-next-expo/ui';
 
 export default function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <TamaguiProvider config={config} disableRootThemeClass>
       <View style={styles.container}>
         <Text>Open up App.tsx to start working on your app!</Text>
         <StatusBar style="auto" />
         <Button label="Hello World">Mui Buton</Button>
       </View>
-    </ThemeProvider>
+    </TamaguiProvider>
   );
 }
 
