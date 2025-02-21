@@ -2,6 +2,7 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "target": "ES2017",
+    "module": "esnext",
     "lib": ["dom", "esnext"],
     "strict": true
   },

@@ -6,6 +6,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^6.4.5",
+    "react-native": "^0.78.0",
     "react-native-paper": "^5.13.1"
   },
   "exports": {
